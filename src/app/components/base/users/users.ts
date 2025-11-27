@@ -36,7 +36,6 @@ export class Users {
       nombre: '',
       correo: '',
       contrasenia: '',
-      rol: ''
     })
     this.getAllUsers();
   }
@@ -90,7 +89,6 @@ export class Users {
           nombre: data.nombre,
           correo: data.correo,
           contrasenia: data.contrasenia,
-          rol: data.rol,
         });
       }
     );

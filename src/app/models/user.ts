@@ -1,9 +1,9 @@
 export interface User {
   user: {
     id: number,
-    usuario: string,
+    nombre: string,
     correo: string,
-    clave: string,
+    contrasenia: string,
   }
 
 }
