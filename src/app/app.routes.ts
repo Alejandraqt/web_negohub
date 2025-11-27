@@ -12,6 +12,7 @@ export const routes: Routes = [
     {path: 'login', component: Login},
     {path: 'register', component: Register},
     {path: '', component: Homei, pathMatch: 'full'},
+    {path: 'inicio', component: Homei},
     {path: 'animal', component: Animal},
     {path: 'users', component: Users},
     {path: 'logout', component: Logout},

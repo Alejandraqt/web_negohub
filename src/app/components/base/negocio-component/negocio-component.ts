@@ -5,11 +5,12 @@ import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { take } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { Menu } from '../../menu/menu';
 
 
 @Component({
   selector: 'app-negocio-component',
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, Menu],
   templateUrl: './negocio-component.html',
   styleUrl: './negocio-component.css',
 })
@@ -23,10 +24,12 @@ export class NegocioComponent {
     private toastr: ToastrService,
   ) { }
   
+  titlePage: string = 'Negocios';
   negociosList: any = [];
   negocioForm!: FormGroup ;
   idNegocio: any;
   editableNegocio: boolean = false;
+  user = 'Usuario';
 
 
   ngOnInit() {

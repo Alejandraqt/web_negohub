@@ -5,10 +5,11 @@ import { Router } from '@angular/router';
 import { take } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../../../services/user-service';
+import { Menu } from '../../menu/menu';
 
 @Component({
   selector: 'app-users',
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, Menu],
   templateUrl: './users.html',
   styleUrl: './users.css',
 })
@@ -21,11 +22,14 @@ export class Users {
     private router: Router,
     private toastr: ToastrService
   ) { }
-
+  
+  titlePage: string = 'Usuarios';
   usersList: any = [];
   userForm!: FormGroup ;
   idUser: any;
   editableUser: boolean = false;
+  user = 'Usuario';
+
 
   ngOnInit() {
     this.userForm = this.formBuilder.group({
@@ -47,7 +51,7 @@ export class Users {
     this.userService.newUser(this.userForm.value).subscribe(
       () => {
         //Redirigiendo a la ruta actual /inicio y recargando la ventana
-        this.router.navigate(['/user'])
+        this.router.navigate(['/users'])
           .then(() => {
             this.newMessage('Registro exitoso');
           })
