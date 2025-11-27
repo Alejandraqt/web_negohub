@@ -79,7 +79,7 @@ export class NegocioComponent {
     this.negocioService.updateNegocio(this.idNegocio, this.negocioForm.value).subscribe(
       () => {
         //Enviando mensaje de confirmación
-        this.newMessage("negocio editado");
+        this.newMessage("Negocio editado");
       }
     );
   }
@@ -108,7 +108,7 @@ export class NegocioComponent {
     this.negocioService.deleteNegocio(id).subscribe(
       () => {
         //Enviando mensaje de confirmación
-        this.newMessage("negocio eliminado");
+        this.newMessage("Negocio eliminado");
       }
     );
   }
