@@ -7,6 +7,7 @@ import { Animal } from './components/base/animal/animal';
 import { Users } from './components/base/users/users';
 import { Logout } from './components/authentication/logout/logout';
 import { NegocioComponent } from './components/base/negocio-component/negocio-component';
+import { CategoriaComponent } from './components/base/categoriaComp/categoriaComp';
 
 export const routes: Routes = [
     {path: 'login', component: Login},
@@ -16,6 +17,7 @@ export const routes: Routes = [
     {path: 'animal', component: Animal},
     {path: 'users', component: Users},
     {path: 'logout', component: Logout},
-    {path: 'negocio', component: NegocioComponent}
+    {path: 'negocio', component: NegocioComponent},
+    {path: 'categoria', component: CategoriaComponent}
 
 ];
