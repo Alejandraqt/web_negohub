@@ -14,7 +14,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 To start a local development server, run:
 
 ```bash
-ng serve
+npm start
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
@@ -25,6 +25,17 @@ Angular CLI includes powerful code scaffolding tools. To generate a new componen
 
 ```bash
 ng generate component component-name
+or
+ng g c component-name
+
+```
+To generate a new service, run:
+
+```bash
+ng generate service service-name
+or
+ng g s service-name
+
 ```
 
 For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
@@ -38,7 +49,7 @@ ng generate --help
 To build the project run:
 
 ```bash
-ng build
+npm start
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
